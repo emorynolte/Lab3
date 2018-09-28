@@ -274,7 +274,7 @@ public class Sudoku extends LatinSquare {
 	
 	public int getRegionNbr(int iCol, int iRow)
 	{
-		return 0;
+		return 0; //commit test comment 
 		
 	}
 	
