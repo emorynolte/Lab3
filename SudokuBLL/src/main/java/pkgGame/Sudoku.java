@@ -271,4 +271,40 @@ public class Sudoku extends LatinSquare {
 		
 		return true;
 	}
+	
+	public int getRegionNbr(int iCol, int iRow)
+	{
+		return 0;
+		
+	}
+	
+	
+	public void PrintPuzzle()
+	{
+		
+	}
+	
+	
+	private void FillDiagonalRegions()
+	{
+		
+	}
+	
+	
+	private void SetRegion(int r)
+	{
+		
+	}
+	
+	
+	private void ShuffleRegion(int r)
+	{
+		
+	}
+	
+	
+	private void shuffleArray(int[] ar)
+	{
+		
+	}
 }
