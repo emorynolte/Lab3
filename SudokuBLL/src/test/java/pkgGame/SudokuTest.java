@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+import pkgHelper.LatinSquare;
+import pkgHelper.Sudoku;
+
 public class SudokuTest {
 /*
 	@Test
@@ -257,5 +260,23 @@ public class SudokuTest {
 		
 		assertTrue(Arrays.equals(Region5, s1.getRegion(5)));
 		
+	}
+	
+	@Test
+	public void printPuzzleTest_1() throws Exception
+	{
+		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
+		Sudoku s = new Sudoku(MySquare);
+		
+		s.printPuzzle();
+	}
+	
+	@Test
+	public void setRegionTest_1()
+	{
+		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
+		LatinSquare LS = new LatinSquare(MySquare);
+		
+		//Syst
 	}
 }
