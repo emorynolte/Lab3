@@ -3,9 +3,10 @@ package pkgGame;
 import pkgEnum.ePuzzleViolation;
 import pkgHelper.LatinSquare;
 import pkgHelper.PuzzleViolation;
-import java.util.Arrays;
 
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.util.*;
 
 /**
  * Sudoku - This class extends LatinSquare, adding methods, constructor to
@@ -280,7 +281,7 @@ public class Sudoku extends LatinSquare {
 		return (iCol / iSqrtSize) + (iRow % iSqrtSize); 	
 	}
 	
-	public void printPuzzle() 
+	public void PrintPuzzle() 
 	{
 		for (int i = 0; i < super.getLatinSquare().length; i ++)
 		{
@@ -318,13 +319,13 @@ public class Sudoku extends LatinSquare {
 
 	}
 	
-	private void shuffleRegion(int r)
+	public void ShuffleRegion(int r)
 	{
-		shuffleArray(this.getRegion(r));
+		ShuffleArray(getRegion(r));
 	}
 	
-	private void shuffleArray(int[] ar)
+	private void ShuffleArray(int[] ar)
 	{
-		ArrayUtils.shuffle(ar);
+		//ArrayUtils.shuffle(ar);
 	}
 }

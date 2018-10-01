@@ -248,44 +248,32 @@ public class SudokuTest {
 		assertFalse(s.getRegionNbr(0, 0) == 1);
 	}
 	
-	@Test
+	/*@Test
 	public void printPuzzleTest_1() throws Exception
 	{
 		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
 		Sudoku s = new Sudoku(MySquare);
 		
 		s.printPuzzle();
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void setRegionTest_1()
 	{
 		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
 		LatinSquare LS = new LatinSquare(MySquare);
 		
-		//Syst
-	}
-	
-	/*@Test
-	public void shuffleRegionTest_1() 
-	{
-		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
-		Sudoku s = new Sudoku(MySquare);
-		
-		s.shuffleRegion(0);
-		assertFalse(Arrays.equals(s.getRegion(0),{2,4,1,3}));
-		
-	}
-	
-	@Test
-	public void shuffleArrayTest_1()
-	{
-		int[] myArray = {2, 4, 1, 3};
-		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
-		Sudoku s = new Sudoku(MySquare);
-		
-		s.shuffleArray(myArray);
-		assertFalse(Arrays.equals(myArray, {2, 4, 1, 3}));
 		
 	}*/
+	
+	@Test
+	public void shuffleArrayTest_1() throws Exception
+	{
+		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
+		Sudoku LS = new Sudoku(MySquare);
+		
+		LS.ShuffleRegion(0);
+		
+		LS.PrintPuzzle();
+	}
 }
