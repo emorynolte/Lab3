@@ -295,7 +295,11 @@ public class Sudoku extends LatinSquare {
 	
 	private void FillDiagonalRegions()
 	{
+		for (int i = 0; i < iSqrtSize; i++)
+		{
+			
 		
+		}
 	}
 	
 	private void SetRegion(int r)
