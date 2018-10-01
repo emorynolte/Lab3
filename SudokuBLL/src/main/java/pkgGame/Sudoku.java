@@ -3,6 +3,7 @@ package pkgGame;
 import pkgEnum.ePuzzleViolation;
 import pkgHelper.LatinSquare;
 import pkgHelper.PuzzleViolation;
+import jvava.
 
 /**
  * Sudoku - This class extends LatinSquare, adding methods, constructor to
@@ -21,6 +22,7 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * @version 1.2
 	 * @since Lab #2
+	 *
 	 */
 	private int iSize;
 
