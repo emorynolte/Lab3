@@ -293,16 +293,25 @@ public class Sudoku extends LatinSquare {
 		}
 	}
 	
-	private void FillDiagonalRegions()
+	public void FillDiagonalRegions() throws Exception
 	{
 		int mult = iSqrtSize + 1;
+		
+		/*int[] reg = new int[super.getLatinSquare().length()];
+		for (int j = 0; j < iSize; j++)
+		{
+			reg[j] = j + 1;
+		}*/
+		
+		
 		for (int i = 0; i < iSqrtSize; i++)
 		{
 			SetRegion(i * mult);
 		}
+		
 	}
 	
-	public void SetRegion(int r)
+	/*public void SetRegion(int r)
 	{
 		java.util.Random rand = new java.util.Random();
 		
@@ -327,6 +336,7 @@ public class Sudoku extends LatinSquare {
 					if (isValidValue(i, j, randNum) && !super.doesElementExist(reg, randNum))
 					{
 						reg[iCnt++] = randNum;
+						//super.getLatinSquare().LatinSquare[i][j] = randNum;
 						spotFilled = true;
 					}
 					else 
@@ -336,6 +346,29 @@ public class Sudoku extends LatinSquare {
 				}
 			}
 		}
+	}*/
+	
+	public void SetRegion(int r)
+	{
+		java.util.Random rand = new java.util.Random();
+		
+		int[] reg = new int[super.getLatinSquare().length];
+		
+
+		int i = (r / iSqrtSize) * iSqrtSize;
+		int j = (r % iSqrtSize) * iSqrtSize;		
+		int jMax = j + iSqrtSize;
+		int iMax = i + iSqrtSize;
+		int iCnt = 0;
+
+		for (; i < iMax; i++) 
+		{
+			for (j = (r % iSqrtSize) * iSqrtSize; j < jMax; j++) 
+			{
+				super.setPlace(i, j, iCnt++);
+			}
+		}
+		
 	}
 	
 	private void ShuffleRegion(int r)

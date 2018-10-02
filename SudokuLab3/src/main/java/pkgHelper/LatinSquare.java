@@ -362,4 +362,9 @@ public class LatinSquare {
 	{
 		PV.add(pv);
 	}
+	
+	protected void setPlace(int iCol, int iRow, int num)
+	{
+		LatinSquare[iCol][iRow] = num;
+	}
 }
