@@ -293,7 +293,7 @@ public class Sudoku extends LatinSquare {
 		}
 	}
 	
-	public void FillDiagonalRegions() throws Exception
+	private void FillDiagonalRegions() throws Exception
 	{
 		int mult = iSqrtSize + 1;
 		
@@ -307,7 +307,7 @@ public class Sudoku extends LatinSquare {
 		
 	}
 	
-	public void ShuffleRegion(int r)
+	private void ShuffleRegion(int r)
 	{
 		java.util.Random rand = new java.util.Random();
 		
@@ -343,7 +343,7 @@ public class Sudoku extends LatinSquare {
 		}
 	}
 	
-	public void SetRegion(int r)
+	private void SetRegion(int r)
 	{
 		int i = (r / iSqrtSize) * iSqrtSize;
 		int j = (r % iSqrtSize) * iSqrtSize;		
@@ -361,12 +361,7 @@ public class Sudoku extends LatinSquare {
 		
 	}
 	
-	/*private void ShuffleRegion(int r)
-	{
-		ShuffleArray(getRegion(r));
-	}*/
-	
-	public void ShuffleArray(int[] ar)
+	private void ShuffleArray(int[] ar)
 	{
 		ArrayList<Integer> tempList = new ArrayList<Integer>(ar.length);
 		

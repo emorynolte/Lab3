@@ -258,7 +258,7 @@ public class SudokuTest {
 	}*/
 	
 	@Test
-	public void setRegionTest_1() throws Exception
+	/*public void setRegionTest_1() throws Exception
 	{
 		int[][] MySquare = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 		Sudoku s = new Sudoku(MySquare);
@@ -297,5 +297,5 @@ public class SudokuTest {
 		
 		
 		
-	}
+	}*/
 }
