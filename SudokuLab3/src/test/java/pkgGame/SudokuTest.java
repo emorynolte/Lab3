@@ -257,7 +257,7 @@ public class SudokuTest {
 		s.printPuzzle();
 	}*/
 	
-	@Test
+	
 	/*public void setRegionTest_1() throws Exception
 	{
 		int[][] MySquare = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
@@ -269,8 +269,11 @@ public class SudokuTest {
 		
 		s.PrintPuzzle();
 	}
+	*/
 	
-	@Test
+	
+	/* @Test
+	
 	public void shuffleArrayTest_1() throws Exception
 	{
 		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
@@ -284,6 +287,9 @@ public class SudokuTest {
 		
 	}
 	
+	*/
+	
+	/*
 	@Test 
 	public void fillDiagonalsTest_1() throws Exception
 	{
