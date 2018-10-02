@@ -295,19 +295,19 @@ public class Sudoku extends LatinSquare {
 	
 	private void FillDiagonalRegions()
 	{
+		int mult = iSqrtSize + 1;
 		for (int i = 0; i < iSqrtSize; i++)
 		{
-			
-		
+			SetRegion(i * mult);
 		}
 	}
 	
-	private void SetRegion(int r)
+	public void SetRegion(int r)
 	{
 		java.util.Random rand = new java.util.Random();
 		
-		
 		int[] reg = new int[super.getLatinSquare().length];
+		
 
 		int i = (r / iSqrtSize) * iSqrtSize;
 		int j = (r % iSqrtSize) * iSqrtSize;		
@@ -315,25 +315,48 @@ public class Sudoku extends LatinSquare {
 		int iMax = i + iSqrtSize;
 		int iCnt = 0;
 
-		for (; i < iMax; i++) {
-			for (j = (r % iSqrtSize) * iSqrtSize; j < jMax; j++) {
-				reg[iCnt++] = super.getLatinSquare()[i][j];
+		for (; i < iMax; i++) 
+		{
+			for (j = (r % iSqrtSize) * iSqrtSize; j < jMax; j++) 
+			{
+				int randNum = rand.nextInt(iSize) + 1;
+				boolean spotFilled = false;
+			
+				while (!spotFilled)
+				{
+					if (isValidValue(i, j, randNum) && !super.doesElementExist(reg, randNum))
+					{
+						reg[iCnt++] = randNum;
+						spotFilled = true;
+					}
+					else 
+					{
+						randNum = rand.nextInt(iSize) + 1;
+					}
+				}
 			}
 		}
-
 	}
 	
-	
-	
-	
-	public void ShuffleRegion(int r)
+	private void ShuffleRegion(int r)
 	{
 		ShuffleArray(getRegion(r));
 	}
 	
-	
 	private void ShuffleArray(int[] ar)
 	{
-		//ArrayUtils.shuffle(ar);
+		ArrayList<Integer> tempList = new ArrayList<Integer>(ar.length);
+		
+		for (int i = 0; i < ar.length; i ++)
+		{
+			tempList.add(ar[i]);
+		}
+		
+		Collections.shuffle(tempList);
+		
+		for (int i = 0; i < ar.length; i ++)
+		{
+			ar[i] = tempList.get(i).intValue();
+		}
 	}
 }

@@ -258,15 +258,17 @@ public class SudokuTest {
 	}*/
 	
 	/*@Test
-	public void setRegionTest_1()
+	public void setRegionTest_1() throws Exception
 	{
-		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
-		LatinSquare LS = new LatinSquare(MySquare);
+		int[][] MySquare = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+		Sudoku LS = new Sudoku(MySquare);
 		
+		LS.PrintPuzzle();
 		
+		LS.SetRegion(0);
 	}*/
 	
-	@Test
+	/*@Test
 	public void shuffleArrayTest_1() throws Exception
 	{
 		int[][] MySquare = { { 2, 4, 1, 3 }, { 1, 3, 4, 2 }, { 3, 1, 2, 4 }, { 4, 2, 3, 1 } };
@@ -275,5 +277,25 @@ public class SudokuTest {
 		LS.ShuffleRegion(0);
 		
 		LS.PrintPuzzle();
-	}
+	}*/
+	
+	/*@Test 
+	public void fillDiagonalsTest_1() throws Exception
+	{
+		int[][] mySquare = new int[9][9];
+		Sudoku s = new Sudoku(mySquare);
+		
+		s.FillDiagonalRegions();
+		
+		assertTrue(s.isPartialSudoku());
+		
+		for (int i = 1; i < 10; i++)
+		{
+			//these tests should check each that each of the 3 diagonal regions contains all 9 values
+			assertFalse(s.isValidValue(0, 0, i));
+			assertFalse(s.isValidValue(3, 3, i));
+			assertFalse(s.isValidValue(6, 6, i));
+		}
+		
+	}*/
 }
